@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills</title>
+  <link rel="stylesheet" href="/styles.css">
+ 
+</head>
+<body>
+  <header>
+    <h1>Skills</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/contact-information">Contact Information</a></li>
+      <li><a href="/professional-summary">Professional Summary</a></li>
+      <li><a href="/work-experience">Work Experience</a></li>
+      <li><a href="/education">Education</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/languages">Languages</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <% if (skills && skills.length > 0) { %>
+      <ul>
+        <% let i = 0; %>
+        <% while (i < skills.length) { %>
+          <li><%= skills[i] %></li>
+          <% i++; %>
+        <% } %>
+      </ul>
+    <% } else { %>
+      <p>No skills data available.</p>
+    <% } %>
+    
+    <button onclick="location.href='/languages'">Next: Languages</button>
+  </section>
+</body>
+</html>

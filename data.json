@@ -1,0 +1,65 @@
+{
+  "contactInformation": {
+    "name": "Rustam",
+    "surname": "Mukanov",
+    "email": "241289@astanait.edu.kz",
+    "phone": "+33760911696",
+    "address": "1234 Street Name, City, Country",
+    "profilePicture": "/images/profile.jpg"
+  },
+  "professionalSummary": "Software Engineer with experience in web development and cybersecurity. Good at building and maintaining websites with React and Node.js. Worked on making web apps faster and more secure. Enjoy working with teams and learning new skills.",
+  "workExperience": [
+    {
+      "company": "Microsoft",
+      "position": "Web Developer",
+      "duration": "June 2032 - September 2034",
+      "description": [
+          "Built and developed web applications using React and Angular.   Worked with designers and other developers to add new features and improve user experience. Improved website performance by reducing load times and optimizing resources."
+      ]
+    },
+    {
+      "company": "Pinterest",
+      "position": "Frontend Developer",
+      "duration": "January 2030 - May 2032",
+      "description": [
+        "Optimized web performance by improving load speed and reducing code size. Tested and fixed bugs to ensure a better user experience."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Astana IT University",
+      "degree": "Bachelor of Cybersecurity",
+      "duration": "September 2024 - June 2027",
+      "description": "Studied cybersecurity principles, network security, and web application protection. Gained skills in encryption, ethical hacking, and secure coding practices."
+    },
+    {
+      "institution": "Heriot Watt University",
+      "degree": "Master of Science in Software Engineering",
+      "duration": "September 2027 - June 2029",
+      "description": "Specialized in software development methodologies, advanced programming techniques, and project management."
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "C/C++",
+    "Node.js",
+    "React",
+    "HTML & CSS",
+    "Database Management"
+  ],
+  "languages": [
+    {
+      "name": "Kazakh",
+      "level": 7
+    },
+    {
+      "name": "Russian",
+      "level": 9
+    },
+    {
+      "name": "English",
+      "level": 5
+    }
+  ]
+}

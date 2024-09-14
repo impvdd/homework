@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      background-color: #F0F0F0;
+      color: #333333; 
+      margin: 0;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333333;
+      color: #FFFFFF;
+    }
+    
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    
+    nav {
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background-color: #444444;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: #555555;
+    }
+    
+    section {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    h2 {
+      color: #333333;
+    }
+    
+    p, ul {
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+    
+    .education-item {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+    
+    .education-item:last-child {
+      border-bottom: none;
+    }
+    
+    .institution-name {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    
+    .degree, .duration {
+      color: #555555;
+    }
+    
+    .description {
+      margin-top: 10px;
+    }
+    
+    button {
+      background-color: #333333;
+      color: #FFFFFF;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+    }
+    
+    button:hover {
+      background-color: #555555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Education</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/contact-information">Contact Information</a></li>
+      <li><a href="/professional-summary">Professional Summary</a></li>
+      <li><a href="/work-experience">Work Experience</a></li>
+      <li><a href="/education">Education</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/languages">Languages</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <% if (education && education.length > 0) { %>
+      <% let i = 0; %>
+      <% while (i < education.length) { %>
+        <div class="education-item">
+          <p class="institution-name"><%= education[i].institution %></p>
+          <p class="degree"><%= education[i].degree %></p>
+          <p class="duration"><%= education[i].duration %></p>
+          <p class="description"><%= education[i].description %></p>
+        </div>
+        <% i++; %>
+      <% } %>
+    <% } else { %>
+      <p>No education data available.</p>
+    <% } %>
+    
+    <button onclick="location.href='/skills'">Next: Skills</button>
+  </section>
+</body>
+</html>

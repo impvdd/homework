@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Information</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .contact-details {
+      flex: 1;
+    }
+
+    .profile-picture {
+      width: 200px; 
+      height: 250px; 
+      border-radius: 15px;
+      object-fit: cover;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Information</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/contact-information">Contact Information</a></li>
+      <li><a href="/professional-summary">Professional Summary</a></li>
+      <li><a href="/work-experience">Work Experience</a></li>
+      <li><a href="/education">Education</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/languages">Languages</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>My Contact Details</h2>
+    
+    <div class="contact-container">
+      <!-- Блок с контактными данными -->
+      <div class="contact-details">
+        <p><strong>Name:</strong> <%= contactInfo.name %></p>
+        <p><strong>Surname:</strong> <%= contactInfo.surname %></p>
+        <p><strong>Email:</strong> <%= contactInfo.email %></p>
+        <p><strong>Phone:</strong> <%= contactInfo.phone %></p>
+        <p><strong>Address:</strong> <%= contactInfo.address %></p>
+      </div>
+
+      <!-- Блок с фотографией профиля -->
+      <div class="profile-picture-container">
+        <img src="<%= contactInfo.profilePicture %>" alt="Profile Picture" class="profile-picture">
+      </div>
+    </div>
+
+    <button onclick="location.href='/professional-summary'">Next: Professional Summary</button>
+  </section>
+</body>
+</html>

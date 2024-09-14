@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Experience</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+
+    .work-item {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+    
+    .work-item:last-child {
+      border-bottom: none;
+    }
+    
+    .company-name {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    
+    .position, .duration {
+      color: #555555;
+    }
+    
+    .description {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Work Experience</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/contact-information">Contact Information</a></li>
+      <li><a href="/professional-summary">Professional Summary</a></li>
+      <li><a href="/work-experience">Work Experience</a></li>
+      <li><a href="/education">Education</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/languages">Languages</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <% if (workExperience && workExperience.length > 0) { %>
+      <% let i = 0; %>
+      <% while (i < workExperience.length) { %>
+        <div class="work-item">
+          <p class="company-name"><%= workExperience[i].company %></p>
+          <p class="position"><%= workExperience[i].position %></p>
+          <p class="duration"><%= workExperience[i].duration %></p>
+          <p class="description"><%= workExperience[i].description %></p>
+        </div>
+        <% i++; %>
+      <% } %>
+    <% } else { %>
+      <p>No work experience data available.</p>
+    <% } %>
+    
+    <button onclick="location.href='/education'">Next: Education</button>
+  </section>
+</body>
+</html>

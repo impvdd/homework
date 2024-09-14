@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Languages</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .language-item {
+      margin-bottom: 20px;
+    }
+
+    .language-name {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+
+    .progress-bar {
+      background-color: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      height: 25px;
+    }
+
+    .progress-bar-fill {
+      background-color: #4caf50;
+      height: 100%;
+      transition: width 0.4s ease;
+      color: #fff;
+      text-align: center;
+      line-height: 25px;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #333333;
+      color: #FFFFFF;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #555555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Languages</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/contact-information">Contact Information</a></li>
+      <li><a href="/professional-summary">Professional Summary</a></li>
+      <li><a href="/work-experience">Work Experience</a></li>
+      <li><a href="/education">Education</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/languages">Languages</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Language Proficiency</h2>
+    <% languages.forEach(language => { %>
+      <div class="language-item">
+        <div class="language-name"><%= language.name %></div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style='width: <%= language.level * 10 %>%;'>
+            <%= language.level %>/10
+          </div>
+        </div>
+      </div>
+    <% }); %>
+
+    <button onclick="location.href='/finish'">Finish</button>
+  </section>
+</body>
+</html>
